@@ -1,0 +1,25 @@
+#include <iostream>
+
+bool check(int i)
+{
+	if (i < 0)
+		return false;
+
+	if (i == 1 && i == 2 && i == 3)
+		return true;
+
+	for (int j = i / 2; j> 1; j--)
+	{
+		if (i%j == 0)
+			return false;	
+	}
+	return true;
+}
+
+int main()
+{
+    int i;
+	std::cout << "Please enter an integer value: "<<std::endl;
+	std::cin >> i;
+	std::cout<<check(i) << std::endl;
+}
