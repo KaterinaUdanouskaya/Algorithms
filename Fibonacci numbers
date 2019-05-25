@@ -1,1 +1,25 @@
+#include <iostream>
+#include<istream>
 
+int main()
+{
+	int n;
+	std::cout << "Please enter n-th Fibonacci number: " << std::endl;
+	std::cin >> n;
+	long long f;
+	long long f0 = 0;
+	long long f1 = 1;
+
+	for (int i=0; i <= n; i++)
+		if (i > 1)
+		{
+			f = f0 + f1;
+			f0 = f1;
+			f1 = f;
+			std::cout << f << std::endl;
+		}
+		else
+			f = i;
+	std::cout << f << std::endl;
+	return 0;
+}
